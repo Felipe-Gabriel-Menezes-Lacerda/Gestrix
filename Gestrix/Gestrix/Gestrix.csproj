@@ -64,4 +64,27 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Project\Models\" />
+	  <Folder Include="Project\Repositories\" />
+	  <Folder Include="Project\ViewModels\" />
+	  <Folder Include="Project\Services\" />
+	  <Folder Include="Project\Views\Components\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Project\Views\SignInScreen.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Project\Views\SignUpScreen.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Project\Views\ViewAllProducts.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Project\Views\ViewSingleProduct.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
