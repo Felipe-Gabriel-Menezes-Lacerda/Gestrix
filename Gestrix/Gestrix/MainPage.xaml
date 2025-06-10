@@ -4,9 +4,9 @@
              x:Class="Gestrix.MainPage">
 
     <ScrollView>
-        
-        
-        
+
+        <Label Text="Bem vindo ao aplicativo"/>
+
     </ScrollView>
 
 </ContentPage>

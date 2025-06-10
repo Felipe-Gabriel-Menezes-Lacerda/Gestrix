@@ -4,7 +4,7 @@ namespace Gestrix
 {
     public partial class MainPage : ContentPage
     {
-        public bool isLogedUser = false;
+        public static bool isLogedUser = false;
 
         public MainPage()
         {
@@ -17,6 +17,8 @@ namespace Gestrix
             base.OnAppearing();
 
             SecureStorage.Default.RemoveAll();
+
+            HandleUserOpenApp();
 
         } 
 
