@@ -1,24 +1,38 @@
-﻿namespace Gestrix
+﻿using Gestrix.Project.Views;
+
+namespace Gestrix
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        public bool isLogedUser = false;
 
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            count++;
+            base.OnAppearing();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            SecureStorage.Default.RemoveAll();
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+        } 
+
+        public async void HandleUserOpenApp()
+        {
+            if (isLogedUser)
+            {
+                return;
+            } else
+            {
+                await Navigation.PushAsync(new SignInScreen());
+            }
+
+
         }
+
+    
     }
 }
