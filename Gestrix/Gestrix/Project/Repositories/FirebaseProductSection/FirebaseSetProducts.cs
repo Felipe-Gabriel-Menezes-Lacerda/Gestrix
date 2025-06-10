@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gestrix.Project.Repositories
+namespace Gestrix.Project.Repositories.FirebaseProductSection
 {
     class FirebaseSetProducts
     {

@@ -65,7 +65,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Project\Models\" />
 	  <Folder Include="Project\Repositories\" />
 	  <Folder Include="Project\ViewModels\" />
 	  <Folder Include="Project\Services\" />
