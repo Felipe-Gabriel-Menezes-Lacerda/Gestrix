@@ -29,7 +29,7 @@ namespace Gestrix
                 return;
             } else
             {
-                await Navigation.PushAsync(new SignInScreen());
+                
             }
 
 

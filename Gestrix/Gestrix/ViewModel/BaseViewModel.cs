@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace Gestrix.Project.Models.UserSection
+namespace Gestrix.ViewModel
 {
-    class ShopWorker
+    public partial class BaseViewModel : ObservableObject
     {
+
     }
 }

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gestrix.Project.Repositories.FirebaseProductSection
+namespace Gestrix.ViewModel
 {
-    class FirebaseGetProducts
+    public class AuthViewModel
     {
+        
     }
 }
