@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestrix.ViewModel
 {
-    public class AuthViewModel
+    public class SignInViewModel
     {
-        
     }
 }
