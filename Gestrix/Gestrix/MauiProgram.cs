@@ -25,8 +25,8 @@ namespace Gestrix
 #endif
             builder.Services.AddSingleton(new FirebaseAuthClient(new FirebaseAuthConfig()
             {
-                ApiKey = "AIzaSyB-BwENhaHgwXcRLC2fj0aBpf0IASIHp28",
-                AuthDomain = "gestrix-58333.firebaseapp.com",
+                ApiKey = "******",
+                AuthDomain = "*******",
                 Providers = new FirebaseAuthProvider[]
                 {
                     new EmailProvider()
