@@ -43,7 +43,15 @@ namespace Gestrix.ViewModel
         [RelayCommand]
         private async Task NavigateSignIn()
         {
-            await Shell.Current.GoToAsync("//SignIn");
+            try
+            {
+                await Shell.Current.GoToAsync("//SignIn");
+            }
+            catch (Exception error)
+            {
+                Console.WriteLine(error.Message);
+            }
+            
         }
     }
 }

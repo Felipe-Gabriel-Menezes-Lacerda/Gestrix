@@ -15,10 +15,11 @@
 
             <VerticalStackLayout>
 
-                <Label Text="Login"
+                <Label Text="Cadastrar"
                  TextColor="{StaticResource TextColor}"
                  FontSize="20"
-                 Margin="0,0,10,0"/>
+                 Margin="0,0,0,10"
+                 HorizontalOptions="Center"/>
 
                 <Label Text="Email"
                        TextColor="{StaticResource TextColor}"
@@ -27,7 +28,6 @@
                   Background="{StaticResource BorderBackgroundColor}">
                     <VerticalStackLayout>
                         <Entry Placeholder="Email" Text="{Binding Email}"
-                         Margin="0,0,10,0"
                          TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
@@ -38,7 +38,6 @@
                         Background="{StaticResource BorderBackgroundColor}">
                     <VerticalStackLayout>
                         <Entry Placeholder="Nome de usuário" Text="{Binding Username}"
-                                Margin="0,0,10,0"
                                TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
@@ -54,8 +53,9 @@
                 </Border>
 
                 <Button Command="{Binding SignUpCommand}"
-                        Text="Cadastrar Usuário"/>
-                <Button Command="{Binding NavigateSignInCommand}"/>
+                        Text="Cadastrar Usuário"
+                        Margin="0,10,0,10"/>
+                <Button Text="Já possui uma conta" Command="{Binding NavigateSignInCommand}"/>
 
             </VerticalStackLayout>
 

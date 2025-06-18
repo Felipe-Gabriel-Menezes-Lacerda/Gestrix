@@ -19,32 +19,35 @@
                 <Label Text="Login"
                        TextColor="{StaticResource TextColor}"
                        FontSize="20"
-                       Margin="0,0,10,0"/>
+                       Margin="0,0,0,10"
+                       HorizontalOptions="Center"/>
 
                 <Label Text="Email"
                        TextColor="{StaticResource TextColor}"/>
                 <Border StrokeShape="RoundRectangle 20" 
                         Background="{StaticResource BorderBackgroundColor}">
                     <VerticalStackLayout>
-                        <Entry Placeholder="Email" Text="{Binding Email}"
-                               Margin="0,0,10,0"
+                        <Entry Placeholder="Email" Text="{Binding Email}"                             
                                TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
+
+                <Label Text="Senha"
+                       TextColor="{StaticResource TextColor}"/>
 
                 <Border StrokeShape="RoundRectangle 20">
                     <VerticalStackLayout>
                         <Entry Placeholder="Senha"
                                IsPassword="True" Text="{Binding Password}"
-                               Margin="0,0,10,0"
                                TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
 
                 <Button Command="{Binding SignInCommand}"
-                        Text="Entrar"/>
+                        Text="Entrar"
+                        Margin="0,10,0,10"/>
                 <Button Command="{Binding NavigateSignUpCommand}"
-                        Text="Ainda não tem uma conta?" HorizontalOptions="End"/>
+                        Text="Ainda não tem uma conta?"/>
 
                 <Label x:Name="MessageLabel"/>
                 
