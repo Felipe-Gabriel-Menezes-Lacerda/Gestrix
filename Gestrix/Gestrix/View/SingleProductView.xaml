@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gestrix.ViewModel"
+             x:DataType="local:SingleProductViewModel"
+             x:Class="Gestrix.View.SingleProductView"
+             Title="SingleProductView">
+    <VerticalStackLayout>
+        <Border Background="{StaticResource BorderBackgroundColor}">
+            <VerticalStackLayout>
+
+                <HorizontalStackLayout Margin="0,0,0,10">
+                    <Label Text="Id do produto" Margin="0,0,10,0"/>
+                    <Label Text="{Binding productId}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="0,0,0,10">
+                    <Label Text="Código de produto" Margin="0,0,10,0"/>
+                    <Entry Text="{Binding productGTIN}" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="0,0,0,10">
+                    <Label Text="Nome do produto" Margin="0,0,10,0"/>
+                    <Entry Text="{Binding productName}" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Margin="0,0,0,10">
+                    <Label Text="Preço do produto" Margin="0,0,10,0"/>
+                    <Entry Text="{Binding productPrice}" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label Text="Preço do produto" Margin="0,0,10,0"/>
+                    <Entry Text="{Binding productQuantity}" TextColor="{StaticResource TextColor}"/>
+                </HorizontalStackLayout>
+
+
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

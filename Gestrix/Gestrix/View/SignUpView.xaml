@@ -6,7 +6,7 @@
              x:Class="Gestrix.View.SignUpView"
              Title="Cadastro de usuário">
     
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
         <Border StrokeShape="RoundRectangle"
           Padding="20"
           MaximumWidthRequest="400"

@@ -9,16 +9,17 @@
     <ShellContent
         Title="Login"
         ContentTemplate="{DataTemplate local:SignInView}"
-        Route="SignIn" 
-        IsVisible="False"/>
+        Route="SignIn"/>
     <ShellContent
         Title="Cadastrar usuário"
         ContentTemplate="{DataTemplate local:SignUpView}"
-        Route="SignUp"
-        IsVisible="False"/>
+        Route="SignUp"/>
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainView}"
         Route="Home"/>
+    <ShellContent
+        Title="Adicionar produtos"
+        ContentTemplate="{DataTemplate local:CreateSingleProductView}"/>
 
 </Shell>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gestrix.ViewModel"
+             x:DataType="local:CreateSingleProductViewModel"
+             x:Class="Gestrix.View.CreateSingleProductView"
+             Title="Adicionar produtos">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Border Background="{StaticResource BorderBackgroundColor}"
+                Padding="10"
+                MaximumWidthRequest="500"
+                MaximumHeightRequest="500">
+
+            <VerticalStackLayout>
+                
+                <VerticalStackLayout Margin="0,0,0,10">
+                    <Label Text="Código do produto" Margin="0,0,0,5" TextColor="{StaticResource TextColor}"/>
+
+                    <Border Background="{StaticResource BorderBackgroundColor}" 
+                            StrokeShape="RoundRectangle 20">
+
+                        <Entry Text="{Binding productGTIN}" 
+                               TextColor="{StaticResource TextColors}"
+                               Placeholder="Código do produto"/>
+                    </Border>
+                    
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="0,0,0,10">
+                    <Label Text="Nome do produto" Margin="0,0,0,5" TextColor="{StaticResource TextColor}"/>
+
+                    <Border Background="{StaticResource BorderBackgroundColor}" 
+                            StrokeShape="RoundRectangle 20">
+
+                        <Entry Text="{Binding productGTIN}" 
+                               TextColor="{StaticResource TextColors}"
+                               Placeholder="Nome do produto"/>
+                    </Border>
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="0,0,0,10">
+                    <Label Text="Preço do produto" Margin="0,0,0,5" TextColor="{StaticResource TextColor}"/>
+
+                    <Border Background="{StaticResource BorderBackgroundColor}" 
+                            StrokeShape="RoundRectangle 20">
+
+                        <Entry Text="{Binding productGTIN}" 
+                               TextColor="{StaticResource TextColors}"
+                               Placeholder="Preço do produto"/>
+                    </Border>
+
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Label Text="Quantidade do produto" Margin="0,0,0,5" TextColor="{StaticResource TextColor}"/>
+
+                    <Border Background="{StaticResource BorderBackgroundColor}" 
+                            StrokeShape="RoundRectangle 20">
+
+                        <Entry Text="{Binding productGTIN}" 
+                               TextColor="{StaticResource TextColors}"
+                               Placeholder="Quantidade do produto"/>
+                    </Border>
+
+                </VerticalStackLayout>
+
+                <Button Text="Adicionar Produto"/>
+
+            </VerticalStackLayout>
+
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>
