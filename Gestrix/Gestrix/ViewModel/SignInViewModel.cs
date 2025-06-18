@@ -30,7 +30,7 @@ namespace Gestrix.ViewModel
             {
                 await _authClient.SignInWithEmailAndPasswordAsync(Email, Password);
                 OnPropertyChanged(nameof(Username));
-                await Shell.Current.GoToAsync("//SignUp");
+                await Shell.Current.GoToAsync("//Home");
 
             } catch (Exception exception)
             {
