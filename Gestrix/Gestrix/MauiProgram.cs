@@ -3,6 +3,7 @@ using Firebase.Auth.Providers;
 using Microsoft.Extensions.Logging;
 using Gestrix.View;
 using Gestrix.ViewModel;
+using Firebase.Auth.Repository;
 
 namespace Gestrix
 {
@@ -30,6 +31,7 @@ namespace Gestrix
                 {
                     new EmailProvider()
                 },
+                UserRepository = new FileUserRepository("GestrixMessage")
             }));
 
             builder.Services.AddSingleton<SignInView>();

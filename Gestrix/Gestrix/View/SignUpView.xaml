@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gestrix.ViewModel"
+             x:DataType="local:SignUpViewModel"
              x:Class="Gestrix.View.SignUpView"
-             Title="SignUpView">
+             Title="Cadastro de usuário">
     
     <VerticalStackLayout>
+        <Border StrokeShape="RoundRectangle"
+          Padding="20"
+          MaximumWidthRequest="400"
+          MaximumHeightRequest="500"
+          Background="{StaticResource BorderBackgroundColor}">
 
+            <VerticalStackLayout>
+
+                <Label Text="Login"
+                 TextColor="{StaticResource TextColor}"
+                 FontSize="20"
+                 Margin="0,0,10,0"/>
+
+                <Label Text="Email"
+                       TextColor="{StaticResource TextColor}"
+                       HorizontalOptions="Start"/>
+                <Border StrokeShape="RoundRectangle 20" 
+                  Background="{StaticResource BorderBackgroundColor}">
+                    <VerticalStackLayout>
+                        <Entry Placeholder="Email" Text="{Binding Email}"
+                         Margin="0,0,10,0"
+                         TextColor="{StaticResource TextColor}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Label Text="Nome de usuário"
+                       TextColor="{StaticResource TextColor}"/>
+                <Border StrokeShape="RoundRectangle 20" 
+                        Background="{StaticResource BorderBackgroundColor}">
+                    <VerticalStackLayout>
+                        <Entry Placeholder="Nome de usuário" Text="{Binding Username}"
+                                Margin="0,0,10,0"
+                               TextColor="{StaticResource TextColor}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Label Text="Senha"
+                       TextColor="{StaticResource TextColor}"/>
+                <Border StrokeShape="RoundRectangle 20">
+                    <VerticalStackLayout>
+                        <Entry Placeholder="Senha"
+                         IsPassword="True" Text="{Binding Password}"
+                         TextColor="{StaticResource TextColor}"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Button Command="{Binding SignUpCommand}"
+                        Text="Cadastrar Usuário"/>
+                <Button Command="{Binding NavigateSignInCommand}"/>
+
+            </VerticalStackLayout>
+
+        </Border>
     </VerticalStackLayout>
     
 </ContentPage>

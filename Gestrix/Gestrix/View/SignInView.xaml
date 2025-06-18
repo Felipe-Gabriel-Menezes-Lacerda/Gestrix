@@ -1,30 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Gestrix.ViewModel"
+             x:DataType="local:SignInViewModel"
              x:Class="Gestrix.View.SignInView"
              Title="Login">
     
-    <VerticalStackLayout>
+    <VerticalStackLayout VerticalOptions="Center">
         <Border StrokeShape="RoundRectangle"
                 Padding="20"
-                MaximumWidthRequest="300"
-                MaximumHeightRequest="300"
-                Background="{StaticResource BorderBackGroundColor}">
+                MaximumWidthRequest="400"
+                MaximumHeightRequest="500"
+                Background="{StaticResource BorderBackgroundColor}"
+                >
 
-            <VerticalStackLayout HorizontalOptions="Center">
+            <VerticalStackLayout>
 
                 <Label Text="Login"
                        TextColor="{StaticResource TextColor}"
                        FontSize="20"
                        Margin="0,0,10,0"/>
 
+                <Label Text="Email"
+                       TextColor="{StaticResource TextColor}"/>
                 <Border StrokeShape="RoundRectangle 20" 
                         Background="{StaticResource BorderBackgroundColor}">
                     <VerticalStackLayout>
-                        <Label Text="Email"
-                               TextColor="{StaticResource TextColor}"/>
                         <Entry Placeholder="Email" Text="{Binding Email}"
-                               Margin="0,0,10,0"/>
+                               Margin="0,0,10,0"
+                               TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
 
@@ -32,12 +36,18 @@
                     <VerticalStackLayout>
                         <Entry Placeholder="Senha"
                                IsPassword="True" Text="{Binding Password}"
-                               Margin="0,0,10,0"/>
+                               Margin="0,0,10,0"
+                               TextColor="{StaticResource TextColor}"/>
                     </VerticalStackLayout>
                 </Border>
 
-                <Button Command="{Binding SignInCommand}"/>
-                <Button Command="{Biding NavigateSignUpCommand}"/>
+                <Button Command="{Binding SignInCommand}"
+                        Text="Entrar"/>
+                <Button Command="{Binding NavigateSignUpCommand}"
+                        Text="Ainda não tem uma conta?" HorizontalOptions="End"/>
+
+                <Label x:Name="MessageLabel"/>
+                
 
 
             </VerticalStackLayout>

@@ -1,12 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Firebase.Auth;
 
 namespace Gestrix.ViewModel
 {
-    public class SignInViewModel
+    public partial class SignInViewModel : ObservableObject
     {
+        private readonly FirebaseAuthClient _authClient; 
+
+        [ObservableProperty]
+        private string _email;
+
+        [ObservableProperty]
+        private string _password;
+
+        public string Username => _authClient.User?.Info?.DisplayName;
+
+
+
+        public SignInViewModel(FirebaseAuthClient authClient)
+        {
+            _authClient = authClient;
+        }
+
+        [RelayCommand]
+        private async Task SignIn()
+        {
+            try
+            {
+                await _authClient.SignInWithEmailAndPasswordAsync(Email, Password);
+                OnPropertyChanged(nameof(Username));
+                await Shell.Current.GoToAsync("//SignUp");
+
+            } catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+           
+        }
+
+        [RelayCommand]
+        private async Task NavigateSignUp()
+        {
+            await Shell.Current.GoToAsync("//SignUp");
+        }
+
     }
 }
